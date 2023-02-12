@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Frontend Mentor | 3-column preview card component</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            lexendDeca: ['Lexend Deca', 'sans-serif'],
+                            bigShoulders: ['Big Shoulders Display', 'cursive'],
+                        },
+                        colors: {
+                            brightOrange: 'hsl(31, 77%, 52%)',
+                            darkCyan: 'hsl(184, 100%, 22%)',
+                            veryDarkCyan: 'hsl(179, 100%, 13%)',
+                            transWhite: 'hsla(0, 0%, 100%, 0.75)', // paragraphs
+                            lightGray: 'hsl(0, 0%, 95%)', // background, headings, buttons
+                        },
+                        fontSize: {
+                            sm: '15px',
+                        },
+                        width: {
+                            340: '340px',
+                        },
+                        height: {
+                            500: '500px',
+                        },
+                    },
+                },
+            }
+        </script>
+    </head>
+    <body>
+        <div class="grid items-center place-content-center min-h-screen">
+            <div class="grid grid-flow-row-dense lg:grid-flow-col-dense">
+                <div
+                    class="bg-brightOrange p-10 rounded-t-xl lg:rounded-t-none lg:rounded-l-xl w-340 h-[420px] lg:h-[450px] mt-14 lg:mt-0 relative"
+                >
+                    <img src="images/icon-sedans.svg" alt="sedan icon" />
+                    <h1 class="text-lightGray font-bigShoulders text-4xl my-8">
+                        SEDANS
+                    </h1>
+                    <p class="text-transWhite text-sm font-lexendDeca">
+                        Choose a sedan for its affordability and excellent fuel
+                        economy. Ideal for cruising in the city or on your next
+                        road trip.
+                    </p>
+                    <button
+                        class="text-brightOrange bg-lightGray font-lexendDeca rounded-full px-7 py-4 absolute bottom-11 hover:bg-transparent hover:text-transWhite hover:ring-2 hover:ring-transWhite"
+                    >
+                        Learn More
+                    </button>
+                </div>
+                <div
+                    class="bg-darkCyan p-10 w-340 h-[420px] lg:h-[450px] relative"
+                >
+                    <img src="images/icon-suvs.svg" alt="suv icon" />
+                    <h1 class="text-lightGray font-bigShoulders text-4xl my-8">
+                        SUVS
+                    </h1>
+                    <p class="text-transWhite text-sm font-lexendDeca">
+                        Take an SUV for its spacious interior, power, and
+                        versatility. Perfect for your next family vacation and
+                        off-road adventures.
+                    </p>
+                    <button
+                        class="text-darkCyan bg-lightGray font-lexendDeca rounded-full px-7 py-4 absolute bottom-11 hover:bg-transparent hover:text-transWhite hover:ring-2 hover:ring-transWhite"
+                    >
+                        Learn More
+                    </button>
+                </div>
+
+                <div
+                    class="bg-veryDarkCyan p-10 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl w-340 h-[420px] lg:h-[450px] mb-14 lg:mb-0 relative"
+                >
+                    <img src="images/icon-luxury.svg" alt="luxury icon" />
+                    <h1 class="text-lightGray font-bigShoulders text-4xl my-8">
+                        LUXURY
+                    </h1>
+                    <p class="text-transWhite text-sm font-lexendDeca">
+                        Cruise in the best car brands without the bloated
+                        prices. Enjoy the enhanced comfort of a luxury rental
+                        and arrive in style.
+                    </p>
+                    <button
+                        class="text-veryDarkCyan bg-lightGray font-lexendDeca rounded-full px-7 py-4 absolute bottom-11 hover:bg-transparent hover:text-transWhite hover:ring-2 hover:ring-transWhite"
+                    >
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
